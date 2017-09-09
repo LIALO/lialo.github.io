@@ -1,0 +1,10 @@
+.cnt-img{
+	margin: 10px auto;
+	max-width: 500px
+}
+.cnt-img img{
+	max-width: 500px;
+	filter: alpha(opacity=0);
+    -webkit-filter: drop-shadow(0 0 8px #FDE311);
+    filter: drop-shadow(0 0 8px #FDE311 );
+}
