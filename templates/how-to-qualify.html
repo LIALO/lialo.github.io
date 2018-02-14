@@ -1,0 +1,356 @@
+<section class="dst-block">
+	<h1>Support Process</h1>
+	<div class="dst-content">
+		<h3>Jump to:</h3>
+		<ol>
+			<li><a href="#check-id">Check for the DID to be the same at doneness doc and global file (if RE, must be like the live site plus a 9 at the start)</a></li>
+			<li><a href="#stats">Set up the <b>stats account</b> - (https://stats.dealerspike.com/), (url, doneness <b>New</b> (http://bit.ly/newdoneness) - <b>Old</b> (http://bit.ly/olddoneness) &amp; global, user, permission, auth key)</a></li>
+			<li><a href="#events">Copy over events from the current site to the stage one</a></li>
+			<li><a href="#finance-app">Create the finance app header (follow stage site's design, include only the dealer logo and background elements)</a></li>
+			<li><a href="#newsletter">If the client has [newsletter account](https://myemma.com/login), create an updated stationary (copy on fred the psd files)</a></li>
+			<li><a href="#staff">Check for Staff Members, if so please add Staff page through Staff Builder</a></li>
+			<li><a href="#testimonials">NC: copy over testimonials (if there are pictures in the current site for testimonials, upload them to `/fckimages/testimonials`)</a></li>
+			<li><a href="#dashboard">RE: Add all Settings in **Dashboard Feature Management** as the live site</a></li>
+		</ol>
+	</div>
+	<hr/>
+	<div id="check-id" class="block">
+		<h3>1. Check for the DID to be the same at doneness doc and global file (if RE, must be like the live site plus a 9 at the start)</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#catch-id">Catches</a></li>
+				<li><a data-toggle="tab" href="#improv-id">Improvements</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="catch-id">          <!--CATCHEEEEEESSS-->
+					<p><span class="alert">Global (New y RE):</span></p>
+						<ul>
+							<li>Cuando el ID del global.asa no coincide con el doneness, ni viceversa. Se debio preguntar al launcher cual es el correcto.</li>
+						</ul>
+					<!--<div class="dst-row">
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+				<div class="tab-pane fade" id="improv-id">              <!--IMPROVEMENTTTTTTT-->
+					<p><span class="alert">(RE):</span></p>
+						<ul>
+							<li>Cuando le falta un 9 al ID en el doneness, es decir que no esta actualizado. Aqui tendriamos que avisar al launcher.</li>
+						</ul>
+					<!--<div class="dst-row"> 
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>Cuando le falta un 9 al ID en el doneness, es decir que no esta actualizado. Aqui tendriamos que avisar al launcher.</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+			</div>
+	</div>
+	<div id="stats" class="block">
+		<h3>2. Set up the <b>stats account</b> - <a href="https://stats.dealerspike.com" target="_blank">(https://stats.dealerspike.com/)</a>, (url, doneness <b>New</b> <a href="http://bit.ly/newdoneness" target="_blank">(http://bit.ly/newdoneness)</a> - <b>Old</b> <a href="http://bit.ly/olddoneness">(http://bit.ly/olddoneness)</a> &amp; global, user, permission, auth key)</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#catch-stats">Catches</a></li>
+				<li><a data-toggle="tab" href="#improv-stats">Improvements</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="catch-stats">          <!--CATCHEEEEEESSS-->
+					<p><span class="alert">Global (New y RE): </span></p>
+						<ul>
+							<li>Cuando en el global.asa no esta actualizado el ID de stats. La variable "TXT_DEALERSHIP_PIWIK_ANALYTICS_ID", esta vacia.</li>
+							<li>Si el sitio no tiene el permiso marcado en verde (columna "View").</li>
+							<li>Cuando el sitio es de Harley&reg; y no esta agregado en la seccion de "Metasites"</li>
+							<li>Al ingresar al stats con el admin y pass del sitio, nos marca un error de "usuario y contraseña incorrectos".</li>
+							<li>Cuando en el stats del sitio aparecen varios sitios en el dropdown de "Tablero de un sitio especifico", que no son hermanos ni tienen una relacion aparente.</li>
+						</ul>
+					<div class="dst-row">
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>Si el nombre del sitio no coincide con el que esta en el doneness.</li>
+								<li>Si la url del sitio live no es igual al que esta en el doneness.</li>
+								<li>Si el usuario no esta creado. No hay resultados generados con el nombre del sitio.</li>
+								<li>Si en el doneness no esta el ID de stats generado, en la columna "Stats v2".</li>
+								<li>Si el correo electronico en el stats no tiene el formato adecuado al default (STATS@url-live.com)</li>
+								<li>Si el correo electronico no fue actualizado en el doneness.</li>
+								<li>Si el idioma en el stats del sitio esta en Español. Checar las configuraciones de la compu ya que a veces nos cambia el idioma automaticamente.</li>
+								<li>El API no fue ingresado en la opcion "Dashboard Feature Management" en el admin del sitio.</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>Si el correo electronico no coincide con el del doneness.</li>
+								<li>Ir a: <a href="#dashboard"><b>Agregar toda la informacion de **Dashboard Feature Management** como en el sitio live.</b></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="improv-stats">              <!--IMPROVEMENTTTTTTT-->
+					<!--<p><span class="alert">Global (New y RE): </span></p>
+						<ul>
+						</ul>-->
+					<div class="dst-row"> 
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>Si el nombre del sitio no coincide con el que esta en el doneness. A veces los nombres estan diferentes, en el doneness, en el stats e incluso en la tarjeta de Trello. Aqui se buscaria un nombre adecuado, en donde se repita mas, o donde sea coherente.</li>
+								<li>Si la url del sitio live esta diferente al doneness, o viceversa, actualizarlo de preferencia para que se registre la misma informacion.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div>
+	<div id="events" class="block">
+		<h3>3. Copy over events from the current site to the stage one</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#catch-events">Catches</a></li>
+				<li><a data-toggle="tab" href="#improv-events">Improvements</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="catch-events">          <!--CATCHEEEEEESSS-->
+					<p><span class="alert">(New):</span></p>
+						<ul>
+							<li>Si no se pasaron todos los eventos, desde la fecha actual.</li>
+							<li>Si a los eventos les falta algun dato del sitio live (descripción e imagen) que se puedan agregar.</li>
+							<li>Si el sitio es powersports y en tipo de categoria tiene otro que no sea "Rides".</li>
+							<li>Si el sitio no es powersports y tiene como tipo de categoria "Rides", este deberia tener el tipo "Events".</li>
+						</ul>
+					<!--<div class="dst-row">
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+				<div class="tab-pane fade" id="improv-events">              <!--IMPROVEMENTTTTTTT-->
+					<p><span class="alert">(New):</span></p>
+						<ul>
+							<li>Cuando las imagenes no se pueden agregar a un evento. Ya sea porque estan muy grandes o por alguna otra situacion, se pediria respaldarlas.</li>
+						</ul>
+					<!--<div class="dst-row"> 
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>Cuando le falta un 9 al ID en el doneness, es decir que no esta actualizado. Aqui tendriamos que avisar al launcher.</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+			</div>
+
+	</div>
+	<div id="finance-app" class="block">
+		<h3>4. Create the finance app header (follow stage site's design, include only the dealer logo and background elements)</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#catch-finance-app">Catches</a></li>
+				<li><a data-toggle="tab" href="#improv-finance-app">Improvements</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="catch-finance-app">    <!--CATCHEEEEEESSS-->
+					<p><span class="alert">Global (New y RE):</span></p>
+						<ul>
+							<li>Si el header no aparece, ya que el nombre puede estar escrito incorrectamente. No confundir cuando aun no se activa el financeApp. En este caso podemos ir al servidor live y verificar si la imagen de header se encuentra en la carpeta <b>"/imglib/FinanceApp/images".</b></li>
+							<li>En la mayoria de los casos, el logo debe estar centrado, respetando tambien el background del sitio.</li>
+							<li>Si el PSD del header del financeApp no esta respaldado en el servidor FRED.</li>
+						</ul>
+					<!--<div class="dst-row">
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+				<div class="tab-pane fade" id="improv-finance-app">     <!--IMPROVEMENTTTTTTT-->
+					<p><span class="alert">Global (New y RE):</span></p>
+						<ul>
+							<li>Agregar una barra que simule que el navbar esta debajo, por apariencia se ve mejor, pero tomar en cuenta que no todas las veces es posible ya que no todos los navs estan debajo del header, si no estan dentro del header.</li>
+							<li>Para organizar mejor el trabajo se pide que la carpeta donde respaldemos el PSD, tenga el nombre con el año y el mes dentro de la carpeta del sitio.</li>
+							<li>Cuando se requiere actualizar el logo, ya que en el trancurso fue cambiado por otro.</li>
+						</ul>
+					<!--<div class="dst-row"> 
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>Cuando le falta un 9 al ID en el doneness, es decir que no esta actualizado. Aqui tendriamos que avisar al launcher.</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+			</div>
+
+	</div>
+	<div id="newsletter" class="block">
+		<h3>5. If the client has [newsletter account](https://myemma.com/login), create an updated stationary (copy on fred the psd files)</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#catch-newsletter">Catches</a></li>
+				<li><a data-toggle="tab" href="#improv-newsletter">Improvements</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="catch-newsletter">   <!--CATCHEEEEEESSS-->
+					<p><span class="alert">Global (New y RE):</span></p>
+						<ul>
+							<li>Cuando hay cuenta y el template no esta creado.</li>
+							<li>Cuando el template creado no tiene nombre (nombre del sitio, guiarnos por el doneness).</li>
+							<li>El header del newsletter debe tener el logo, direccion y telefono del sitio.</li>
+							<li>El template debe tener linkeado el header al sitio live.</li>
+							<li>El template debe tener la url del live agregado en el footer. Ultimamente hay problemas para linkear, omitir este paso hasta nuevo aviso.</li>
+							<li>Si el template no se comparte a la cuenta del dealer.</li>
+							<li>Si el PSD del header del newsletter no esta respaldado en el servidor FRED.</li>
+						</ul>
+					<!--<div class="dst-row">
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+				<div class="tab-pane fade" id="improv-newsletter">        <!--IMPROVEMENTTTTTTT-->
+					<p><span class="alert">Global (New y RE):</span></p>
+						<ul>
+							<li>Para organizar mejor el trabajo se pide que la carpeta donde respaldemos el PSD, tenga el nombre con el año y el mes dentro de la carpeta del sitio.</li>
+							<li>Respaldar el archivo del header de newsletter con la extension del editor de imagenes "Gimp", que se usa actualmente, para facilitar la edicion del mismo dentro del departamento. Igualmente crear una carpeta con el mes y año actual.</li>
+						</ul>
+					<div class="dst-row"> 
+						<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>Crear el template aun cuando no existe la cuenta, ya que el launcher puede crear la cuenta durante el proceso, tendriamos esa ventaja de tener el template ya listo solamente para compartir.</li>
+							</ul>
+						</div>
+						<!--<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li></li>
+							</ul>
+						</div>-->
+					</div>
+				</div>
+			</div>
+
+	</div>
+	<div id="staff" class="block">
+		<h3>6. Check for Staff Members, if so please add Staff page through Staff Builder</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#catch-staff">Catches</a></li>
+				<li><a data-toggle="tab" href="#improv-staff">Improvements</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="catch-staff">   <!--CATCHEEEEEESSS-->
+					<p><span class="alert">Global (New y RE):</span></p>
+						<ul>
+							<li>Cuando hay xstaff y no esta linkeado al navbar.</li>
+							<li>Cuando falta informacion o es incorrecta en los miembros del staff que estan en el live.</li>
+							<li>Cuando los miembros del staff no estan organizados jerarquicamente dentro de su departamento.</li>
+							<li>Cuando hay informacion aparte del staff, se debe agregar ya sea en el snippet que esta en el header de xstaff (cuando es poca información), o crear una pagina que se llame staff y poner un boton linkeado a xstaff (cuando es mucha informacion).</li>
+						</ul>
+					<div class="dst-row">
+						<!--<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>-->
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>La regla en RE es copiar todas las paginas linkeadas en el sitio. Existen paginas que solamente tienen a ciertos departamentos del staff, con o sin informacion, estas paginas deben copiarse y mandar a llamar el snippet con el script del xstaff.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="improv-staff">        <!--IMPROVEMENTTTTTTT-->
+					<p><span class="alert">Global (New y RE):</span></p>
+						<ul>
+							<li>Cuando no hay xstaff, podemos linkear el xstaff que viene por default a coming soon. Para evitar que la pagina de xstaff se vea vacia, sin contenido.</li>
+							<li>Cuando existen dos telefonos o tiene dos puestos algun miembro del staff, pero solo se puede capturar uno en la herramienta. Se pide agregarlo en la bio, para que la informacion este completa.</li>
+						</ul>
+					<div class="dst-row"> 
+						<!--<div class="dst-col-6">
+							<p><span class="alert">New Clients:</span></p>
+							<ul>
+								<li>--</li>
+							</ul>
+						</div>
+						<div class="dst-col-6">
+							<p><span class="alert">Redesign:</span></p>
+							<ul>
+								<li>Cuando le falta un 9 al ID en el doneness, es decir que no esta actualizado. Aqui tendriamos que avisar al launcher.</li>
+							</ul>
+						</div>
+					</div>-->
+				</div>
+			</div>
+	</div>
+	<hr/>
+	<div id="testimonials" class="block">
+		<h3><strong>NC</strong>: copy over testimonials (if there are pictures in the current site for testimonials, upload them to `/fckimages/testimonials`)</h3>
+
+	</div>
+	<hr>
+	<div id="dashboard" class="block">
+		<h3><strong>RE</strong>: Add all Settings in **Dashboard Feature Management** as the live site</h3>
+
+	</div>
+
+</section>

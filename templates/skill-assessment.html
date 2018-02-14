@@ -1,0 +1,198 @@
+<h1>Content Skill Assessment</h1>
+<p>The purpose of this test is just to see where your knowledge is at currently. No pressure! We just want to know how we can best create training and documentation based off of your current skills</p>
+<form id="skill-assessment-form" name="skill-assessment" method="post" action=""  data-ds-form="[[Template.templatename]]">
+    <div id="name">
+        <div class="formField"> <div class="label placeholder">Name</div>
+            <input name="fname" placeholder="Name" type="text" value="[[FieldValue.FName]]" />
+        </div>
+    </div>
+    <hr>
+    <div id="selectors" class="row">
+        <h3>Question 1</h3>
+        <p>Based on the HTML and CSS, what color should the span be?</p>
+        <div class="formField"> <div class="label placeholder">Answer</div>
+            <select name="selectorsAnswer">
+                <option value="">Select Answer</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <p>HTML</p>
+            <pre>
+&lt;div class="container"&gt;
+    &lt;div class="box"&gt;
+        &lt;p&gt;
+            &lt;span&gt;Hello!&lt;span/&gt;
+        &lt;p/&gt;
+    &lt;div/&gt;
+&lt;div/&gt;
+            </pre>
+        </div>
+        <div class="col-md-6">
+            <p>CSS</p>
+            <pre>
+.box span {color: blue}
+.container > p > span {color: red}
+span {color: green}
+            </pre>
+        </div>
+    </div>
+    <hr>
+    <div id="margin" class="row">
+        <h3>Question 2</h3>
+        <p>Without changing the HTML, put the orange box be in the direct center of the green box</p>
+        <div class="col-md-6">
+            <p>HTML</p>
+            <pre>
+&lt;div class="green-box" style="height: 200px; width: 100%; background: green;"&gt;
+    &lt;div class="orange-box" style="width: 200px; background: orange;"&gt;
+        Orange Box
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+        <div class="col-md-6">
+            <p>CSS</p>
+
+            <textarea name="marginAnswer" id="marginAnswer">
+    your CSS goes here!
+            </textarea>
+            <a id="marginButton" class="apply-css">Apply CSS</a>
+        </div>
+        <div class="col-md-12">
+            <div class="green-box" style="height: 200px; width: 100%; background: green;">
+                    <div class="orange-box" style="width: 200px; text-align: center; background: orange;">
+                        Orange Box
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style id="marginCSS">
+
+        </style>
+
+    </div>
+    <hr>
+
+
+    <div id="positioning" class="row">
+
+        <h3>Question 3</h3>
+        <p>Without changing the HTML, put the blue box in the bottom right corner of the yellow box</p>
+        <div class="col-md-6">
+            <p>HTML</p>
+            <pre>
+&lt;div class="white-box" style="height: 200px; width: 100%; background: white; position: relative;"&gt;
+    &lt;div class="yellow-box" style="width: 40%; height: 40%; background: yellow;"&gt;
+        &lt;div class="blue-box" style="position: absolute; background: blue;"&gt;
+            Blue Box
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+        <div class="col-md-6">
+            <p>CSS</p>
+
+            <textarea name="positioningAnswer" id="positionAnswer">
+    your CSS goes here!
+            </textarea>
+            <a id="positionButton" class="apply-css">Apply CSS</a>
+        </div>
+        <div class="col-md-12">
+            <div class="white-box" style="background: white; position: relative; height: 200px; width: 100%;">
+                <div class="yellow-box" style="width: 40%; height: 40%; background: yellow;">
+                    <div class="blue-box" style="position: absolute; background: blue;">
+                        Blue Box
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style id="positioningCSS">
+
+        </style>
+    </div>
+
+    <div id="clicker" class="row">
+
+        <h3>Question 4</h3>
+        <p>Make a click counter with Javascript/Jquery. When you click on .click-box, #clickCounter should show the total times .click-box has been clicked. <br>Hint: $('.click-box').on('click',function() { ... })</p>
+        <div class="col-md-6">
+            <p>HTML</p>
+            <pre>
+&lt;div class="click-box"&gt;Click Me!&lt;/div&gt;
+&lt;p&gt;Box was clicked &lt;span id="clickCounter"&gt;0&lt;/span&gt; times!&lt;/p&gt;
+            </pre>
+        </div>
+        <div class="col-md-6">
+            <p>Javascript</p>
+
+            <textarea name="clickerAnswer" id="clickerAnswer">
+    your Javascript goes here!
+            </textarea>
+            <a id="clickerButton" class="apply-css">Apply Javascript</a>
+        </div>
+        <div class="col-md-12">
+            <div class="click-box">Click Me!</div>
+            <p>Box was clicked <span id="clickCounter">0</span> times!</p>
+        </div>
+        <script id="scriptContainer">
+
+        </script>
+    </div>
+
+
+
+	[[Snippet.SubmitBlock]]
+	[[Snippet.HiddenFieldsBlock]]
+</form>
+[[Snippet.FormFooter]]
+
+<script>
+$(document).ready(function() {
+    $("input[name=REQMAILTO]").val("sean");
+
+    // margin answer
+    $('#marginButton').click(function() {
+        var marginStyles = $('#marginAnswer').val();
+        $('#marginCSS').remove();
+        $('<style id="marginCSS">'+marginStyles+'</style>').appendTo('#margin');
+    });
+
+    // position answer
+    $('#positionButton').click(function() {
+        var positionStyles = $('#positionAnswer').val();
+        $('#positioningCSS').remove();
+        $('<style id="positioningCSS">'+positionStyles+'</style>').appendTo('#positioning');
+    });
+
+
+
+    // clicker answer
+    $('#clickerButton').on('click', function() {
+        $('.click-box').off('click');
+        run();
+    })
+
+    function run() {
+
+        var el = document.getElementById('clickerAnswer');
+        var scriptText = el.value;
+        var oldScript = document.getElementById('scriptContainer');
+        var newScript;
+
+        if (oldScript) {
+          oldScript.parentNode.removeChild(oldScript);
+        }
+
+        newScript = document.createElement('script');
+        newScript.id = 'scriptContainer';
+        newScript.text = el.value;
+        document.body.appendChild(newScript);
+    }
+
+});
+</script>

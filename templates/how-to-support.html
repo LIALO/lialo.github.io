@@ -1,0 +1,218 @@
+﻿<section class="dst-block">
+	<h1>Support Process</h1>
+	<div class="dst-content">
+		<h3>Jump to:</h3>
+		<ol>
+			<li><a href="#check-id">Check for the DID to be the same at doneness doc and global file (if RE, must be like the live site plus a 9 at the start)</a></li>
+			<li><a href="#stats">Set up the <b>stats account</b> - (https://stats.dealerspike.com/), (url, doneness <b>New</b> (http://bit.ly/newdoneness) - <b>Old</b> (http://bit.ly/olddoneness) &amp; global, user, permission, auth key)</a></li>
+			<li><a href="#events">Copy over events from the current site to the stage one</a></li>
+			<li><a href="#finance-app">Create the finance app header (follow stage site's design, include only the dealer logo and background elements)</a></li>
+			<li><a href="#newsletter">If the client has [newsletter account](https://myemma.com/login), create an updated stationary (copy on fred the psd files)</a></li>
+			<li><a href="#staff">Check for Staff Members, if so please add Staff page through Staff Builder</a></li>
+			<li><a href="#testimonials">NC: copy over testimonials (if there are pictures in the current site for testimonials, upload them to `/fckimages/testimonials`)</a></li>
+			<li><a href="#dashboard">RE: Add all Settings in **Dashboard Feature Management** as the live site</a></li>
+		</ol>
+	</div>
+	<hr/>
+	<div id="check-id" class="block">
+		<h3>1. Check for the DID to be the same at doneness doc and global file (if RE, must be like the live site plus a 9 at the start)</h3>
+		<p>Abrir el archivo de global.asa del sitio y el ID debe ser exactamente el mismo que el doneness.</p>
+			<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#new-id">New Clients</a></li>
+				<li><a data-toggle="tab" href="#re-id">Redesign</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="new-id">
+					<p><span class="alert">ID example:</span><span class="image-link"><a href="https://imgur.com/iHXFuFw" target="_blank"> Click here to open image</a></span></p>
+					<p><span class="alert">Cuando no coincide:</span> Preguntarle directamente al launcher cual es el ID correcto.</p>
+				</div>
+		  		<div class="tab-pane fade" id="re-id">
+		  			<p><span class="alert">ID example:</span><span class="image-link"><a href="https://imgur.com/rpvm1WR" target="_blank"> Click here to open image</a></span></p>
+					<p><span class="alert">Cuando no coincide:</span> Decirle directamente al launcher que el ID no esta actualizado.</p>
+					<p><span class="alert">Cuando tiene un 9 de mas:</span> Esto pasa cuando los sitios son rediseños de rediseños. Es comun verlo ultimamente.</p>
+					<div class="dsImageContainer"><img src="/fckimages/support/ID-99.png"></div>
+		  		</div>
+			</div>
+	</div>
+	<div id="stats" class="block">
+		<h3>2. Set up the <b>stats account</b> - <a href="https://stats.dealerspike.com" target="_blank">(https://stats.dealerspike.com/)</a>, (url, doneness <b>New</b> <a href="http://bit.ly/newdoneness" target="_blank">(http://bit.ly/newdoneness)</a> - <b>Old</b> <a href="http://bit.ly/olddoneness">(http://bit.ly/olddoneness)</a> &amp; global, user, permission, auth key)</h3>
+		<div>
+			<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#new-stats">New Clients</a></li>
+				<li><a data-toggle="tab" href="#re-stats">Redesign</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="new-stats">
+				<p><span class="alert">Stats Account:</span> El sitio se agrega en el stats <a href="https://stats.dealerspike.com" target="_blank">(https://stats.dealerspike.com/)</a>, en Administración (icono superior derecho) - Websites (menu izquierdo), <b>"Add a new website"</b><span class="image-link"><a href="https://imgur.com/xLQGSA1" target="_blank"> Click here to open image</a></span></p>
+				<p>Name: Agregar el nombre del sitio (el que viene en el doneness).</p>
+				<p>URLs: Agregar la URL del sitio live, que esta en el doneness.</p>
+				<p>Por ultimo clickeamos "Save".<span class="image-link"><a href="https://imgur.com/tANXWf4" target="_blank"> Click here to open image</a></span></p>
+				<p>Buscamos el sitio de nuevo, nos generara un <b>ID de stats</b>, se agrega en el doneness (fila correspondiente "Stats ID - Stats v2") y en global.asa (en el archivo de global.asa en la variable con nombre de "TXT_DEALERSHIP_PIWIK_ANALYTICS_ID").<span class="image-link"><a href="https://imgur.com/FzY03TO" target="_blank"> Click here to open image</a></span></p>
+				<p>Enseguida agregamos al usuario. En la columna de la izquierda seleccionamos "Users", y en la barra de busqueda ponemos el ID de stats. Seleccionamos el nombre del sitio y nos arrojara la informacion sobre el sitio.</p>
+				<p>Daremos click al boton de "Add User", que se encuentra en la seccion "Users Management".</p>
+				<div class="dsImageContainer"><img src="/fckimages/support/UserAdd.png"></div>
+				<p>Username: Agregar el nombre de admin que esta en el doneness.</p>
+				<p>Password: Agregar el pass del doneness.</p>
+				<p>Email: Agregar el correo default <b>stats@url-del-sitio.com</b>, y actualizarlo en el doneness, en la fila Web Stats Email.</p>
+				<p>Alias: Agregar el nombre del doneness.</p>
+				<p>Guardamos al usuario en "Save".<span class="image-link"><a href="https://imgur.com/i6gXMli" target="_blank"> Click here to open image</a></span></p>
+				<p>Buscamos al usuario agregado en la seccion "Manage Access" y en la columna de View seleccionamos el circulo rojo, para que cambie a color verde, que significa que ya tendra el permiso de acceder a el.</p>
+				<div class="dsImageContainer"><img src="/fckimages/support/view-active.png"></div>
+				<p>Despues, nos loggearemos pero con la cuenta admin del sitio, y nos dirigimos a <b>Personal Settings </b>, y copiamos el nombre del admin y el password del doneness, una vez adentro agregamos el <b>Alias</b> que es el nombre que viene en el doneness, el <b>email</b> y verificar que este en el idioma ingles por default. Y por ultimo "Save".</p>
+				<p>Despues copiamos el <b>API</b>, que viene en el apartado API del menu izquierdo. Nos dirigimos al manage del sitio, y entramos a la seccion <b>DSAdmin</b> en <b>Dashboard Feature Management</b> y agregamos el API (Piwik Authentication Key). Clickeamos "Submit" para guardar los cambios.<span class="image-link"><a href="https://imgur.com/iTb39uh" target="_blank"> Click here to open image</a></span></p>
+				<h3>Harley-Davidson&reg;</h3>
+				<p>Si un sitio es Harley-Davidson&reg; deberemos checar si se encuentra en la lista de sitios en "Meta Sites", que esta en el menu de lado izquierdo. Lo buscamos primero con el nombre. <span class="image-link"><a href="https://imgur.com/o9qi8La" target="_blank"> Click here to open image</a>.</p>
+				<p>Si el sitio no se encuentra, procedemos a agregarlo en <b>Connect a website</b>, agregamos el ID de stats y automaticamente aparecera el nombre en la siguiente casilla. Finalmente clickeamos en "Add".<span class="image-link"><a href="https://imgur.com/DLkBBbw" target="_blank"> Click here to open image</a></span></p>
+				</div>
+				
+				<div class="tab-pane fade" id="re-stats">
+					<p><span class="alert">Stats Account:</span> Abrimos el stats <a href="https://stats.dealerspike.com" target="_blank">(https://stats.dealerspike.com/)</a>, en Administración (icono superior derecho) - Websites (menu izquierdo). Buscamos el sitio con el <b>ID Stats</b> que esta en el doneness. Al ser RE los sitios ya deben estar agregados.<span class="image-link"><a href="https://imgur.com/AomHyvD" target="_blank"> Click here to open image</a></span>
+					</p>
+					<p>Despues buscaremos en "Users", si el sitio tiene la informacion correspondiente con el doneness. Seleccionamos el sitio, buscando con el ID o con el nombre en la barra de busqueda, y una vez seleccionado, buscamos los resultados encontrados. El nombre del admin, el password y el stats deben ser los mismos que en el doneness.</p><div class="dsImageContainer"><img src="/fckimages/support/info-RE.PNG"></div>
+					<p>El permiso de "View", debe estar activo. <div class="dsImageContainer"><img src="/fckimages/support/view-RE.PNG"></div></p>
+					<p>Por ultimo verificaremos que la informacion del sitio este creado, accesaremos con el nombre de admin y el password en la ventana principal del stats.</p>
+					<p>Una vez adentro se verifican los datos con el doneness. Alias, email, y si tiene mas hermanos se deben mostrar en el "Tablero de un sitio especifico"., si no es asi solo se mostrara el nombre del sitio.<span class="image-link"><a href="https://imgur.com/q3ThA0G" target="_blank"> Click here to open image</a></span></p>
+					<p>Despues copiamos el <b>API</b>, que viene en el apartado API del menu izquierdo. Nos dirigimos al manage del sitio, y entramos a la seccion <b>DSAdmin</b> en <b>Dashboard Feature Management</b> y agregamos el API (Piwik Authentication Key).<span class="image-link"><a href="https://imgur.com/iTb39uh" target="_blank"> Click here to open image</a></span></p>
+					<p><a href="#dashboard"><b>RE: Add all Settings in **Dashboard Feature Management** as the live site</b></a></p>
+					<h3>Harley-Davidson&reg;</h3>
+					<p>Si un sitio es Harley-Davidson&reg; deberemos checar si se encuentra en la lista de sitios en "Meta Sites", que esta en el menu de lado izquierdo. Lo buscamos primero con el nombre. <span class="image-link"><a href="https://imgur.com/o9qi8La" target="_blank"> Click here to open image</a></span>.</p>
+					<p>Si el sitio no se encuentra, procedemos a agregarlo en <b>Connect a website</b>, agregamos el ID de stats y automaticamente aparecera el nombre en la siguiente casilla. Finalmente clickeamos en "Add".<span class="image-link"><a href="https://imgur.com/DLkBBbw" target="_blank"> Click here to open image</a></span></p>
+				</div>
+			</div>
+		</div>
+		</p>
+	</div>
+	<div id="events" class="block">
+		<h3>3. Copy over events from the current site to the stage one</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#new-events">New Clients</a></li>
+				<li><a data-toggle="tab" href="#re-events">Redesign</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="new-events">
+					<p>Se buscan los eventos próximos a la fecha actual en el sitio live. Se agregan en la seccion de Events Calendar/Manage Events en el manage del sitio.<span class="image-link"><a href="https://imgur.com/djBnrxx" target="_blank"> Click here to open image</a></span></p>
+					<p>Como vemos en la imagen anterior, seleccionamos un dia del calendario para ingresar el evento, si existe descripción e imagen del evento se agregan tambien. La categoria seleccionaremos "Rides", cuando el sitio sea de powersports, si es de otro tipo seleccionaremos "Events". Por default ya viene cargada la categoria dependiendo del sitio.</p>
+				</div>
+				<div class="tab-pane fade" id="re-events">
+					<p>En Rediseño no se copian los eventos.</p>
+				</div>
+			</div>
+	</div>
+	<div id="finance-app" class="block">
+		<h3>4. Create the finance app header (follow stage site's design, include only the dealer logo and background elements)</h3>
+		<p>Si no hay cuenta, no habrá template por ende, no es necesario crear ni respaldar los PSD.</p>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#new-finance-app">New Clients</a></li>
+				<li><a data-toggle="tab" href="#re-finance-app">Redesign</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="new-finance-app">
+					<p>En nuestro editor de imagenes, creamos un documento que mida 850 x 109, que son las medidas estandar para los headers de financeApp. Agregamos el background que usa actualmente en el sitio stage, y el logo de preferencia ubicado en el centro. Se recomienda agregar una linea hasta abajo, simulando un pedazo del navbar. No es obligatorio esta ultima pero visualmente se ve mejor. <span class="image-link"><a href="https://imgur.com/u0AgX9K" target="_blank"> Click here to open image</a></span></p>
+					<p>Guardamos el archivo con el nombre de la url del stage, y con extension .jpg. <b>Ejemplo: kwcycle.jgp</b></p>
+					<p>Accedemos al servidor live, y en la ruta <b>/imglib/FinanceApp/images</b> agregamos la imagen de financeApp.</p>
+					<p>Respaldamos el archivo PSD en el servidor FRED, de preferencia en una carpeta con el nombre del mes y el año.</p>
+				</div>
+				<div class="tab-pane fade" id="re-finance-app">
+					<p>En nuestro editor de imagenes, creamos un documento que mida 850 x 109, que son las medidas estandar para los headers de financeApp. Agregamos el background que usa actualmente en el sitio stage, y el logo de preferencia ubicado en el centro. Se recomienda agregar una linea hasta abajo, simulando un pedazo del navbar. No es obligatorio esta ultima pero visualmente se ve mejor. <span class="image-link"><a href="https://imgur.com/u0AgX9K" target="_blank"> Click here to open image</a></span></p>
+					<p>Obtener la url del sitio live para el financeApp. Para ello abrimos el inspector del header del financeApp (live), y copiamos el nombre que viene en la etiqueta img. Guardaremos la imagen con ese mismo nombre.<span class="image-link"><a href="https://imgur.com/Q8C0n9V" target="_blank"> Click here to open image</a>.</span></p>
+					<p>Accedemos al servidor live, y en la ruta <b>/imglib/FinanceApp/images</b>, buscamos el financeApp viejo, y lo renombramos agregando la palabra "-old" al final del nombre. Por ultimo agregar la imagen creada.</p>
+					<p>Para verificar que nuestro sitio cargo la imagen, dirigirse a la pagina de financing del sitio, clickeamos el boton "Apply Now" y nos debe abrir la aplicacion con el nuevo header creado.</p>
+					<p>Respaldamos el archivo PSD en el servidor FRED, de preferencia en una carpeta con el nombre del mes y el año.</p>
+				</div>
+			</div>
+	</div>
+	<div id="newsletter" class="block">
+		<h3>5. If the client has [newsletter account](https://myemma.com/login), create an updated stationary (copy on fred the psd files)</h3>
+				<p>Verificamos que el dealer tenga cuenta creada en myemma <b><a href="https://myemma.com/login">https://myemma.com/login</b></a>. Si la cuenta existe aparecera cuando buscas el sitio automaticamente en los resultados<span class="image-link"><a href="https://imgur.com/DKr0MPI" target="_blank"> Click here to open image</a>.</span></p>
+					<p><span class="alert">Cuando la cuenta existe:</span> Creamos el template, para esto, nos dirigimos a Menu en la parte superior derecha, y seleccionamos "Assets". <span class="image-link"><a href="https://imgur.com/7PZZ2v0" target="_blank"> Click here to open image</a>.</span></p>
+					<p>Se cargaran todos los templates realizados. Seleccionaremos "Create a New template", o en algunos casos cuando se tarde mucho, podemos agarrar tambien un template vacio, que aparecen como "Untitled Template", señalado con una flecha en la imagen. <span class="image-link"><a href="https://imgur.com/f0aVUJ7" target="_blank"> Click here to open image</a>.</span></p>
+					<p>En el template pondremos el header de newsletter, que previamente debemos crear en el editor de imagenes con un tamaño de 850 x 100 y siguiendo el mismo color, tipo de fuente e iconos que contenga el header del sitio stage, junto con el logo de lado izquierdo (mismo logo que el financeApp), y el bloque de direccion del sitio junto con el telefono (se pueden obtener del header del sitio) de lado derecho. </p>
+					<p>En el template tambien ponemos el nombre del dealer editando el "Untitled Template", con el nombre que viene en el doneness, agregamos el header y en la parte que dice "Give this image a link", pondremos el link del sitio live y "Save". En la parte que dice "Add Contact Information Here", agregamos el link del sitio live, y con el icono de linkeo superior pondremos el mismo url y finalizamos con "Insert". <span class="image-link"><a href="https://imgur.com/3EBBWYP" target="_blank"> Click here to open image</a>.</span></p>
+					<p>Cuando terminemos de editar, clickeamos "Save & Share". <span class="image-link"><a href="https://imgur.com/RNNQzFq" target="_blank"> Click here to open image</a>.</span></p>
+					<p>Se abrira una ventana de compartir el template con una cuenta, buscaremos la cuenta (nombre del sitio), y palomeamos la casilla y clickeamos "Share".<span class="image-link"><a href="https://imgur.com/2VfChLL" target="_blank"> Click here to open image</a>.</span></p>
+					<p>Por ultimo verificamos que el template se guardo ya que aparece en los resultados de Assets y que tiene una cuenta compartida. <span class="image-link"><a href="https://imgur.com/942tdG2" target="_blank"> Click here to open image</a>.</span></p>
+					<p>Se respalda el PSD del header en el servidor FRED, con una carpeta con el mes y año actual.</p>
+					<p>Adicionalmente tambien respaldamos el archivo del header pero con extension del editor Gimp, usado actualmente (.xcf), dentro de <b>\\SERVERLICIOUS\Content Loading\BackUp Content\responsive\nombre-sitio</b>. Igualmente dentro de una carpeta con el mes y año actual.</p>
+					<p><span class="alert">Cuando la cuenta no existe:</span> No es necesario crear el template, ni se creara el PSD. Solo se dejaria una nota al QA que se esta esperando por la cuenta "Wainting Account".</p>
+	</div>
+	<div id="staff" class="block">
+		<h3>6. Check for Staff Members, if so please add Staff page through Staff Builder</h3>
+		<ul class="nav nav-tabs" role="tablist">
+				 <li class="active"><a data-toggle="tab" href="#new-staff">New Clients</a></li>
+				<li><a data-toggle="tab" href="#re-staff">Redesign</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade in active" id="new-staff">
+					<p>Agregar los miembros del staff del sitio live desde el manage. En el apartado de Page Content/Staff Builder.</p>
+					<p>En "Add a New Group", podemos agregar un departamento, de acuerdo a como estan en el sitio live. En dado caso que no tuvieran departamento, habra que crearlos para jerarquizar a los miembros del staff.</p>
+					<p>Despues de crear un departamento podemos agregar a cada miembro del staff. A continuación se enlistan de manera jerárquica como deben ir los miembros del staff.</p>
+					<ul>
+						<li>Owner</li>
+						<li>President</li>
+						<li>Manager</li>
+						<li>Other</li>
+					</ul>
+					<p>La informacion debe ser capturada correctamente. En el caso que tenga varios telefonos, o mas informacion que no se pueda capturar en las casillas, podemos agregarlo en la casilla "Bio".<span class="image-link"><a href="https://imgur.com/Aj9wPGW" target="_blank"> Click here to open image</a></span></p>
+					<p>Despues de agregar la informacion clickeamos "Save Changes".</p>
+					<p>En el navbar hay que linkear el xstaff. En caso de que no haya staff en el sitio, podemos poner el enlace a coming soon o quitar la opcion del navbar.</p>
+					<p><span class="alert">Content Pages:</span> En algunas paginas del sitio vuelven a mencionar a ciertos miembros del staff. Por ejemplo en la pagina de service, pueden hacer mencion a los miembros del departamento de Service. En estos casos hay un script para obtener esta informacion en especifico, que se muestra en la imagen. <span class="image-link"><a href="https://imgur.com/ra26BGW" target="_blank"> Click here to open image</a></span></p>
+				</div>
+				<div class="tab-pane fade" id="re-staff">
+					<p>En Rediseño, cuando los sitios ya tienen el staff usando la herramienta del manage, no se copian, ya que la misma herramienta lo hace automaticamente.</p>
+					<p>En el navbar hay que linkear el xstaff. En caso de que no haya staff en el sitio, podemos poner el enlace a coming soon o quitar la opcion del navbar.</p>
+					<p><span class="alert">Content Pages:</span> En algunas paginas del sitio vuelven a mencionar a ciertos miembros del staff. Por ejemplo en la pagina de service, pueden hacer mencion a los miembros del departamento de Service. En estos casos hay un script para obtener esta informacion en especifico, que se muestra en la imagen. <span class="image-link"><a href="https://imgur.com/ra26BGW" target="_blank"> Click here to open image</a></span></p>
+				</div>
+			</div>
+	</div>
+	<hr/>
+	<div id="testimonials" class="block">
+		<h3><strong>NC</strong>: copy over testimonials (if there are pictures in the current site for testimonials, upload them to `/fckimages/testimonials`)</h3>
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active"><a data-toggle="tab" href="#new-testimonials">New Clients</a></li>
+				<li><a data-toggle="tab" href="#re-testimonials">Redesign</a></li>
+			</ul>
+			<div class="tab-content">
+			<div class="tab-pane fade in active" id="new-testimonials">
+				<ul>
+					<li>Una vez iniciada la sesion como usarios admin en el sitio de stage en turno, deberos irnos al apartado de <strong>Leads</strong> y seleccionar la opcion de <strong>Email Settings</strong>: <span class="image-link"><a href="https://imgur.com/gR4Xtpr" target="_blank"> Click here to open image</a></span></li>
+					<li>Se debera de realizar un respaldo de los Emails que esten actualmente en las secciones asi como su ubicacion, para poderlos agregar una vez concluido el proceso de agregar los testimonios: <span class="image-link"><a href="https://imgur.com/vqxyVps" target="_blank"> Click here to open image</a></span></li>
+					<li>En las secciones de general, contactus y survey agregar/reemplazar el email: <strong>test@dealerspike.com</strong>: <span class="image-link"><a href="https://imgur.com/IGzw3r2" target="_blank"> Click here to open image</a></span></li>
+					<li>En la primera parte agregar la informacion solicitada, en los espacios correspondientes email, utilizar el <strong>test@dealerspike.com</strong>, si no cuenta con apellido utilizar <strong>"."</strong>: <span class="image-link"><a href="https://imgur.com/JXJJhmh" target="_blank"> Click here to open image</a></span></li>
+					<li>Dependiendo el tipo de comentario, o a que sea referente puede que tenga alguna calificacion la cual seria en las sigueintes opciones: <span class="image-link"><a href="https://imgur.com/c6rDFR8" target="_blank"> Click here to open image</a></span></li>
+					<li><strong>Nota</strong>: De no presentar alguna calificacion, agregarle un 5 estrellas en <strong>Overall Dealership Experience</strong>.</li>
+					<li>Por ultimo agregar el comentario (aunque en ocaciones es(son) nomas la(s) califacacion(es)), y dar click en submit: <span class="image-link"><a href="https://imgur.com/yGIpEyS" target="_blank"> Click here to open image</a></span></li>
+					<li>Una vez agregado los testimonios correspondientes, nos iremos a la seccion de <strong>Page Content</strong>, en el apartado de <strong>Manage Surveys</strong>: <span class="image-link"><a href="https://imgur.com/gQhhtBE" target="_blank"> Click here to open image</a></span></li>
+					<li>Verificar que los testimonios esten correctos, de ser asi, solo se deberan de aprovar, de lo contrario, se desaprovaria/archivaria y se tendria que agregar de nuevo: <span class="image-link"><a href="https://imgur.com/7rA4GMM" target="_blank"> Click here to open image</a></span></li>
+					<li>Por ultimo como se comente en un incio es regresar los emails que estaban en su lugar correspondiente: <span class="image-link"><a href="https://imgur.com/ha4ULKc" target="_blank"> Click here to open image</a></span></li>
+				</ul>
+			</div>
+			<div class="tab-pane fade" id="re-testimonials">
+				<p>En sitios de redise&ntilde;o, no se copian los testimonios.</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div id="dashboard" class="block">
+		<h3><strong>RE</strong>: Add all Settings in **Dashboard Feature Management** as the live site</h3>
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active"><a data-toggle="tab" href="#re-dashboard">Redesign</a></li>
+				<li><a data-toggle="tab" href="#new-dashboard">New Clients</a></li>
+			</ul>
+			<div class="tab-content">
+			<div class="tab-pane fade in active" id="re-dashboard">
+				<ul>
+					<li>En sitio live , en admin, nos movemos a la opcion de DSAdmin en la seccion dashboard : <span class="image-link"><a href="https://imgur.com/s9Bhl4t" target="_blank"> Click here to open image</a></span></li>
+					<li>Ya en dicha seccion, de tener activado alguna de las casillas de la parte superior izquierda, asi como <b>Client Relations Rep</b>, se tranferira toda la infomaci&oacute;n a la misma seccion pero en su sitio stage: <span class="image-link"><a href="https://imgur.com/a/ncLpo" target="_blank"> Click here to open image</a></span></li>
+					<li>Ya en stage deberia estar vacio: <span class="image-link"><a href="https://imgur.com/RjeRWxf" target="_blank"> Click here to open image</a></span></li>
+					<li>Integrariamos toda la informaci&oacute;n del sitio live: <span class="image-link"><a href="https://imgur.com/Y1rMRUK" target="_blank"> Click here to open image</a></span></li>
+					<li>Para que asi quede ya con toda la informaci&oacute;n: <span class="image-link"><a href="https://imgur.com/rfDDWqM" target="_blank"> Click here to open image</a></span></li>
+					<li>Finalizamos con un click en el boton de <b>Submit</b> para guardar: <span class="image-link"><a href="https://imgur.com/5Br3njW" target="_blank"> Click here to open image</a></span></li>
+				</ul>
+			</div>
+			<div class="tab-pane fade " id="new-dashboard">
+				<p>En NC realizaremos lo mismo que se comenta al final del punto en el aparto del API y <b>Dashboard Feature Management</b>, <a href="#stats"><b>2. Set up the stats account</b></a></p>
+			</div>
+		</div>
+	</div>
+
+</section>

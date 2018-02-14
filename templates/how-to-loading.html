@@ -1,0 +1,305 @@
+﻿<section class="dst-block">
+	<h1>Loading Process</h1>
+	[[PageSnippet.Content1]]
+	<div class="dst-content">
+		<h3>Jump to:</h3>
+		<ul>
+			<li><a href="#top-level">Top level navbar links</a></li>
+			<li><a href="#set-up-sef">Set up SEF on all the links</a></li>
+			<li><a href="#update-hours">Update the hours page(s) and footer hours with the ones in the current site, make sure dealer map is in english.</a></li>
+			<li><a href="#careers">Add jobs available in xcareers top content (or a new content page if you need to, and link a CTA to the form).</a></li>
+			<li><a href="#fckimages-re">RE: copy over live fckimages folder content to stage fckimages.</a></li>
+			<li><a href="#fckimages-nc">NC: copy on /fckimages/pdf all PDF files availables in the current site.</a></li>
+			<li><a href="#events-nc">NC: copy over events from the current site to the stage one.</a></li>
+			<li><a href="#address">Make sure that the current site's address and the stage one match (header, footer, hours and newsletter)</a></li>
+			<li><a href="#transfer-pages">Use the Pages Creator to transfer all the current site available pages.</a></li>
+			<li><a href="#ctas">All default pages, and the ones about products and/or services must have a CTA button at the end</a></li>
+			<li><a href="#finance-link">Finance link</a></li>
+			<li><a href="#inventory-filter-links">Add inventory filter links</a></li>
+			<li><a href="#acronyms">Use acronyms correctly (uppercase).</a></li>
+			<li><a href="#images-under-200kb">All images across the site must be under 200KB.</a></li>
+			<li><a href="#easily-readable">Ensure that text is easily readable on all pages.</a></li>
+			<li><a href="#external-links">All external and PDF links must be target="_blank.</a></li>
+			<li><a href="#spelling">spelling: check on Harley-Davidson content, Indian Content, and more...</a></li>
+			<li><a href="#learn-to-ride">On Harley sites, if there is a "learn to ride" page, use the new template that H-D sent to us (make sure the Harley ID is correct).</a></li>
+			<li><a href="#compatibility">Check your site for compatibility with Chrome, Firefox, Edge and IE11 in your PC</a></li>
+			<li><a href="#qa-check">QA quick Check (header.asp line 1 and look for any color boxes that might indicate errors)</a></li>
+			<li><a href="#Backup1">Backup your custom.less and config.asp on serverlicious, if you like, you can also back up the content of your snippets</a></li>
+			<li><a href="#Backup2">RE: create a backup in Serverlicious @ "BackUp (Live Sites)" for content, customcode, css & config.asp.</a></li>
+		</ul>
+		<hr>
+		<div id="top-level">
+			<h3>Top level navbar links must be same as their dropdown's first link</h3>
+			<p>En el navbar, toda opci&oacute;n que tenga un men&uacute; desplegable, deben de coincidir los enlaces tanto del men&uacute; padre (Enlace 1) como del primer hijo (Enlace 2), un ejemplo ser&iacute;a como en la imagen siguiente:</p>
+			<div class="dsImageContainer"><img src="/fckimages/loading/navbar01.png"></div>
+			<ul>
+				<li>El enlace 1 y el 2 deben de ser exactamente los mismos.</li>
+				<li>El texto que se muestra tanto en el men&uacute; padre(enlace 1) y el primer hijo(enlace 2), no necesariamente tiene que ser exactamente igual.</li>
+			</ul>
+			<div class="dsImageContainer"><img src="/fckimages/loading/navbar02.png"></div>
+			<p></p>
+			<ul>
+				<li>En caso de existir &uacute;nicamente una opci&oacute;n como en la imagen anterior, no es necesario manejar dicho un men&uacute; desplegable, ya que es repetitvo.</li>
+				<li>Si existe una opci&oacute;n directa a <strong>Contact Us</strong>, &eacute;ste no debe de presentar un men&uacute; desplegable, por lo que las ocpiones de dicho men&uacute;, se deber&aacute;n distribuir en las dem&aacute;s opciones donde tengan cierta relaci&oacute;n.</li>
+			</ul>
+		</div>
+		<hr>
+		<div id="set-up-sef">
+			<h3>Set up SEF on all the links in header, homepage, footer, internal pages (if needed), corners & side tabs, except for those linked to any Inventory page or xcomingsoon</h3>
+			<p>Agregar un SEF a todos los enlaces que se encuentren en las secciones de:</p>
+			<ul>
+				<li>Header</li>
+				<li>Homepage</li>
+				<li>Footer</li>
+				<li>Internal pages (siempre y cuando sea necesario)</li>
+				<li>Corners &amp; Side tabs</li>
+			</ul>
+			<p>Siempre y cuando en las secciones anteriores los enlaces no mande a:</p>
+			<ul>
+				<li>P&aacute;ginas de inventario</li>
+				<li>P&aacute;ginas externas</li>
+				<li>P&aacute;gina xcomingsoon</li>
+			</ul>
+			<p>Existen actualmente <a href="/learn-more--sef-preloaded">SEF's precargados</a> para p&aacute;ginas default y formularios en el sitio por default en turno, pero en caso de crear una p&aacute;gina totalmente nueva, recuerda que el SEF debe de tener coherencia con la p&aacute;gina en turno y preferentemente que sea corto.</p>
+			<p><strong>Nota</strong>: En los sitios de RE, se respetaran los <strong>SEF</strong>, que existen en el sitio live, de no tener, se puede crear uno o aplicar los precargados dependiendo si es p&aacute;gina default o formulario.</p>
+		</div>
+		<hr>
+		<div id="update-hours">
+			<h3>Update the hours page(s) and footer hours with the ones in the current site, make sure dealer map is in english (`!2sen instead of !1ses-419!2smx`) and has the address/phone block above it</h3>
+
+			<p>Una manera muy sencilla de generar el mapa es copiando el nombre y la direcci&oacute;n del dealer y hacer una b&uacute;squeda en google con esa informaci&oacute;n. Seleccionas la pesta&ntilde;a de "maps", te aseguras que el point est&eacute; seleccionando a la tienda, le das en <b>compartir > incorporar mapa</b> y el enlace que aparece que hay en el atributo <b>src</b> del iframe es el que vamos a poner en el atributo <b>src</b> del iframe que pondremos en el hours. Puedes consultar el template de la p&aacute;gina de hours <a href="/fckimages/loading/hours-template.pdf" target="_blank">aqu&iacute;</a></p>
+
+			<p>La mayoria de las veces tambien en el apartado del footer dle sitio viene la seccion del horario de la tienda(en algunas ocaciones tambien de service o algun otro departamento), este se editara directamente en el archivo de footer.asp de ser necesario una actualizaci&oacute;n: <span class="image-link"><a href="https://imgur.com/1DLNZHC" target="_blank"> Click here to open image</a></span></p>
+
+			<p>En algunos ocaciones existen clientes, con mas de una localidad, por lo que cada pagina de hours que se cree, se debera anexar y actualizar al horario correspondiente: <span class="image-link"><a href="https://imgur.com/1feK8yI" target="_blank"> Click here to open image</a></span>
+		</div>
+		
+		<div id="careers">
+			<h3>Add jobs available in xcareers top content (or a new content page if you need to, and link a CTA to the form)</h3>
+			<ul>
+				<li>Si en el sitio live, existe informacion correspondiente a xcareers y es menor a 10 lineas de texto, este se puede anexar al snippet editable de <b>Instructions</b>, que existe en la misma pagina: <span class="image-link"><a href="https://imgur.com/EsTVN5F" target="_blank"> Click here to open image</a></span></li>
+				<li>En dado caso que el contentido sea igual o mayor a 10 lineas de texto o tenga imagenes, tablas, etc., deberas crear una pagina llamada <b>careers</b>, y en ella agregar y estilizar ahi el contenido y agregar un boton que te lleve al formulario de xcareers. <span class="image-link"><a href="https://imgur.com/LaryD14" target="_blank"> Click here to open image</a></span></li>
+			</ul>
+		</div>
+		<hr>
+		<div id="fckimages-re">
+			<h3>RE: copy over live fckimages folder content to stage fckimages.</h3>
+			<p>Cuando hacemos un sitio de RE-diseño, debemos de copiar el folder **fckimages** del directorio del sitio live, dentro del folder **fckimages** del sitio stage. A manera de recomendación, el folder pudiese ser renombarado como **fckimages-live-site** o algo similar.</p>
+			<p>En la siguiente imagen tenemos el folder **fckimages** del sitio live. Podemos ver cuántos archivos y directorios internos tiene y el tamaño total.</p>
+			<p><span class="image-link"><a href="https://imgur.com/a/pJMzh" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/fckimagesRE01.png"></div -->
+			<p>En esta imagen vemos el folder **fckimages** del sitio live respaldado en la raíz de **fckimages** del sitio stage. Aparte, su nombre fue cambiado para indicar cuál es su contenido.</p>
+			<p><span class="image-link"><a href="https://imgur.com/uJwCZgN" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/fckimagesRE02.png"></div-->
+			<p>Si abrimos este folder, nos aseguraremos de que se realizó una copia exacta del folder **fckimages** del sitio live sin ningún tipo de error o pérdidda.</p>
+			<p><span class="image-link"><a href="https://imgur.com/ACb1H88" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/fckimagesRE03.png"></div-->
+		</div>
+		<hr>
+		<div id="fckimages-nc">
+			<h3>NC: copy on /fckimages/pdf all PDF files availables in the current site.</h3>
+			<p>Para realizar este punto, basta con hacer la busqueda en Google de las siguientes maneras:</p>
+			<ul>
+				<li>site:http://www.example.com filetype:pdf</li>
+				<li>site:https://www.example.com filetype:pdf</li>
+				<li>site:http://example.com filetype:pdf</li>
+				<li>site:https://example.com filetype:pdf</li>
+				<li>site:www.example.com filetype:pdf</li>
+				<li>site:example.com filetype:pdf</li>
+			</ul>
+			<p>No importa cuantos resultados arroje la busqueda, aunque no todos los documentos presentados esten enlazados en el sitio se deberan respaldar y procurar no cambiarles el nombre para que a la hora de revisarlos sea un poco mas sencillo.</p>
+			<p>Los PDFs externos al sitio no tienen que ser respaldados, siempre y cuando estos tengan en la URL un dominio oficial de alguna marcas que venda el sitio (ejemplos: Honda, Harley, etc, etc), pero si seran enlazados.</p>
+			<p>Se deberán agregar en la carpeta fckimages, se recomienda que bajo un folder dentro de esta con un nombre descriptivo, ejemplo: fckimages/PDFs/.</p>
+		</div>
+		<hr>
+		<div id="events-nc">
+			<h3>NC: copy over events from the current site to the stage one</h3>
+			<p>Cuando trabajamos sitios de New Clients, debemos revisar las páginas de eventos o calendarios, para saber si tienen actividades programadas para días futuros. De ser así, tenemos que capturar los eventos en la plataforma</p>
+			<p><span class="image-link"><a href="https://imgur.com/9XwyvGW" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/eventsNC01.png"></div-->
+			<p>Llenamos los campos del formulario con la información que tengamos disponible y creamos el evento.</p>
+			<p>También, podemos abrir el evento creado para añadir más datos del mismo. La descripción corta, una detallada, fechas y horas de inicio y fin, la categoría, la ubicación, imágenes relacionadas, etc. Si no contamos con la información para llenar todos esos campos, debemos asegurarnos de llenar al menos los campos marcados con asterisco.</p>
+			<p><span class="image-link"><a href="https://imgur.com/wmyFzrt" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/eventsNC02.png"></div-->
+			<p>Por último, podemos asegurarnos de que los eventos se hayan guardado correctamente, yendo a la página de /--xcalendar. Donde podemos visualizarlos y abrirlos para ver la información completa.</p>
+			<p><span class="image-link"><a href="https://imgur.com/yxYvjYE" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/eventsNC03.png"></div-->
+		</div>
+		<hr>
+		<div id="address">
+			<h3>Make sure that the current site's address and the stage one match (header, footer, hours and newsletter)</h3>
+			<p>En el sitio stage tenemos el domicilio del dealer en varios lugares, por lo general están en el header, footer, la página de hours y en el banner del template del newsletter. Debemos de asegurarnos que estos datos de domicilio, código postal, ciudad, estado, teléfonos, etc. coincidan con los datos del sitio live.</p>
+			<p>Si alguno de estos datos tuviese un error o diferencia en el sitio stage, se tiene que corregir en el archivo **config.asp** a como viene en el sitio live. Este tipo de errores pudieran ser: nombres mal escritos, letras o números de más o descuidos en la escritura.</p>
+			<p><span class="image-link"><a href="https://imgur.com/o15X3DI" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/address01.png"></div-->
+			<p>Para esto, en todos estos lugares donde aparece el domicilio deben de utilizarse las variables del dealer **[[Dealer.(Variable)]]** para que estos cambios sean efectivos.</variable>
+			<p><span class="image-link"><a href="https://imgur.com/ir7AgMH" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/address02.png"></div-->
+			<p>Si el domicilio viene diferente al sitio live, ya sea de manera completa o parcial, pero que esté escrito de manera válida en el sitio stage, procederemos a consultarlo con los launchers, y que nos proporcionen el domicilio correcto. Este tipo de errores pudieran ser: el nombre de la calle principal diferente, o el número de local es otro sobre la misma calle, o cuando el domicilio es completamente diferente.</p>
+			<p>Si el sitio stage cuenta con varias páginas de hours. Únicamente en la página de **/--hours** o, en su defecto, en la página de la locación principal deben de ir las variables del dealer antes mencionadas. En las otras páginas, se procedera a transcribir cuidadósamente los datos del domicilio del dealer.</p>
+			<p><span class="image-link"><a href="https://imgur.com/afnnJVJ" target="_blank">Click here to open image</a></span></p><!--div class="dsImageContainer"><img src="/fckimages/loading/address03.png"></div-->
+			<p>Sabiendo de antemano cuál es el domicilio correcto del dealer, si en el banner del template de newsletter existe algún error con este, deberá de re-elaborarse con los datos correctos.</p>
+		</div>
+		<hr>
+		<div id="transfer-pages">
+			<h3>Use the <strong>Pages Creator to transfer all the current site available pages</strong> (check for content at current main nav, header, footer, sidebars, corners and slideshows), link them wherever they belong in the stage navbar and make sure the snippet <code>Snippet.ContentHeader</code> is used to place the header section</h3>
+			<p>Casos comunes a la hora de transferir paginas:</p>
+			<h4>1.- Paginas enlazadas en headers, index y/o footer</h4>
+			<p>El caso mas comun es que se encuentre la pagina de una manera muy accesible, por lo tanto no debería haber problema a la hora de transferir estas. Solo se deben tomar en cuenta las practicas dependiendo del tipo se sitio que es:</p>
+			<h5>a) NC:</h5>
+			<p>Se deben omitir formularios e inventarios, pero el contenido estatico dentro de estas se deben colocar en las versiones de Dealerspike correspondientes. o si es muy extenso y requiere usar una estructura un poco mas compleja se puede optar por hacer una pagina nueva con un nombre bien estructurado y un CTA llendo a la página en la que se supone debió haber ido.</p>
+			<p>En caso de páginas tipo Blog se omitirán a no ser que el launcher las pida</p>
+			<h5>b) RE:</h5>
+			<p>No existen restricciones, cada página debe ser transferida a no ser que sean algun tipo de iframe o servicio de Dealerspike, cuyos casos se encuentran explicados en los siguientes puntos</p>
+			<h4>2.- Paginas solo linkeadas dentro de otras paginas</h4>
+			<p>Paginas de este tipo son transferibles siguiendo las restricciones mencionadas anteriormente</p>
+			<h4>3.- Paginas no linkeadas en ningún lado</h4>
+			<p>No son transferibles</p>
+			<h4>4.- Paginas con formularios</h4>
+			<p>En RE se debe crear la pagina en la carpeta de templates y activarla a través del config.asp, si llegasen a tener contenido estatico agregarlo pero el formulario será tratado por FED, entonces se debe notificar al launcher para que pida el cambio</p>
+			<h4>5.- Templates especiales</h4>
+			<p>Son transferibles</p>
+				<ul>
+					<li><b>Learn To Ride de Harley-Davidson</b> - Se debe tener en cuenta si es del tipo New Riders o New &amp; Skilled Riders</li>
+					<li><b>Calculadora de Financiamiento</b> - Se debe tener en cuenta si solo sera de Calculate Payment o Affordability Calculator</li>
+				</ul>
+			<h4>6.- Paginas iframe Dealerspike</h4>
+			<p>es un caso isolado de RE, se manejara como los formularios, se crea la pagina en templates, se transfiere contenido estatico y se notifica al launcher para que pida que activen la pagina
+			<h4>7.- Paginas iframe externos</h4>
+			<p>Se deben agregar pero teniendo en cuenta que si no tiene certificado de seguridad no podrá ser visible, aun agregando https al link puede que no salga, pueden hacer dos cosas aqui.</p>
+				<ul>
+					<li><b>a)</b> entrar al link del iframe para poder adquirir el certificado</li>
+					<li><b>b)</b> dependiendo del tipo de iframe ir a la pagina del proveedor y tratar de crear otro mas actual</li>
+				</ul>
+			<h4>8.- galerías</h4>
+			<p>En NC estas no son transferibles, pero se deben respaldar todas las fotos a menos que sea un iframe de un servicio como PICASA pues estas fotos son agregadas desde google drive. En RE especificamente hay servicio de dealerspike con un iframe con PICASA por lo cual se tomara como cualquier otra pagina con iframe externo: se crea la pagina en templates, se transfiere contenido estatico y se notifica al launcher para que pida que activen la pagina</p>
+		</div>
+		<hr>
+		<div id="ctas">
+			<h3>All default pages, and the ones about products and/or services must have a CTA button at the end</h3>
+			<p>En las páginas default, que son financing, hours, info, parts y service, los CTA enlazan a finance app, /--xcontact, /--xcontact, /--xparts_request y /--xservice_request, respectivamente. Para las demás páginas, se debe de identificar de qué tipo con base en su contenido, y decidir si se debe de agregar un CTA a alguna otra página o formulario.</p>
+			<p>El enlace adecuado para las páginas que hablen de partes y accesorios es /--xparts_request. Todas las páginas de reparación, mantenimiento o servicios técnicos y/o mecánicos van a /--xservice_request.</p>
+			<p>También poner por ejemplo páginas que ofrecen créditos o hablen de cosas de financiamiento que a veces mandamos a xget_quote..</p>
+			<p>Páginas que se pueden mandar a /--xcontact por que el producto no encaja ni en partes ni en servicio técnico o mecánico</p>
+		</div>
+		<hr>
+		<div id="finance-link">
+			<a href="[[Dealer.CONFIG_BIKEINFO_GET FINANCED LINK]]" target="_blank"></a>
+
+			<h3>Finance link: `&#91;&#91;Dealer.CONFIG_BIKEINFO_GETFINANCED_LINK&#93;&#93;`</h3>
+			<p>En el CTA de la p&aacute;gina de financing debe llevar el siguiente <span class="image-link"><a href="https://imgur.com/aOYz7xl" target="_blank">url</a></span>, dado que al ser un dominio diferente este debe abrir en una nueva pesta&ntilde;a.</p>
+		</div>
+		<hr>
+		<div id="inventory-filter-links">
+			<h3>Add inventory filter links on home , info, parts, service and financing pages</h3>
+			<p>Se deben agregar los enlaces de tip de vehiculos y marcas con su respectivo filtro que vende el cliente, en las p&aacute;ginas de parts, service, financing e info (siempre y cuando existan y estos apliquen).</p>
+			<p><b>Nota</b>: De acuerdo a lo estipulado por la gente de Oregon, ya no agregaremos texto en el apartado de <b>Welcome Text</b>, exceptuan algunas ocaciones en que el launcher obtienga el texto, en el tiempo entre fed y content, y este a su vez sea anexado a la tarjeta, entonces podr&iacute;amos agregarlo nosotros.</p
+		</div>
+		<hr>
+		<div id="acronyms">
+			<h3>Use acronyms correctly (uppercase) for ATV, UTV, PWC, SUV and RV everywhere but sef links</h3>
+			<p>Los acr&oacute;nimos deben estar escritos en may&uacute;sculas a excepci&oacute;n en los sef.</p>
+			<p><b>Nota</b>: Ejemplos de acr&oacute;nimos (ATV, UTV, PWC, SUV and RV).</p>
+		</div>
+		<hr>
+		<div id="images-under-200kb">
+			<h3>All images across the site must be under 200KB, for the headers and decorative stuff you should use recent vehicle models of the client&#39;s brands</h3>
+			<p>Todas images utilizadas en el sitio deben pesar menos de <b>200KB</b>.</p>
+			<ul>
+				<li><b>Nota 1</b>: Si una imagen pesa m&aacute;s de esto se debe bajar la resolucion hasta alcanzar el tama&ntilde;o adecuado, en caso de que la imagen en turno al bajar la calidad para adaptarla a la regla no se distinga correctamente, se sugiere escalar la imagem, hasta un peso en el cual se pueda ver de una manera optima, de pasar lo ultimo mencionado se deja una no al QA explicando dicha situaci&oacute;n, realizado lo anterior, se debera respaldar la imagen original en una carpeta llamada backup dentro de la carpeta &#39;/fckimages&#39; del sitio correspondiente.</li>
+				<li><b>Nota 2</b>: Para las im&aacute;genes de header deber&aacute;n utilizarse imagenes de modelos recientes y de marcas que venda el cliente.</li>
+			</ul>
+		</div>
+		<hr>
+		<div id="easily-readable">
+			<h3>Ensure that text is easily readable on all pages, all internal links must be underlined, boldie and the same color as the rest of the text, hover color is up to you</h3>
+			<p>Se debe asegurar que el texto es legible y que los enlaces deberan estar en negritas y del mismo color base que el texto, en subrayado y sin ningun efecto de hover.</p>
+		</div>
+		<hr>
+		<div id="external-links">
+			<h3>All external and PDF links must be `target="_blank`</h3>
+			<p>Los enlaces externo y archivos de PDF deber&aacute;n abrir en una nueva pesta&ntilde;a o ventana nueva.</p>
+		</div>
+		<hr>
+		<div id="spelling">
+			<h3>Spelling: check on Harley-Davidson content, Indian Content, and more...</h3>
+			<p>Se debe asegurar que los nombre de las marcas esten bien escrito y contengan &reg; si es necesario</p>
+			<h4>Harley-Davidson®</h4>
+			<p>La forma correcta de escribir las variaciones de Harley-Davidson® se muestra a continuacion: </p>
+			<ul>
+				<li>Harley-Davidson®</li>
+				<li>Harley-Davidson®'s</li>
+				<li>Harley®</li>
+				<li>Harley®'s</li>
+				<li>HD®</li>
+				<li>H-D®</li>
+				<li>H.O.G.®</li>
+				<li>MotorClothes®</li>
+			</ul>
+			<h4>Indiand Content and more...</h4>
+			<p>Ademas de Harley®, se debe de respetar en otras marcas como son Indian Motorcycle®, Victory Motorcycles®, etc.</p>
+			<ul>
+				<li><strong>Indian Motorcycle®</strong>
+    			<p>Es singular y de debe poner &reg; al final de la palabra <strong>Motorcycle</strong></p></li>
+    			<li><strong>Victory Motorcycles®</strong>
+    				<p>Es plural y se debe poner &reg; despues de la palabra <strong>Motorcycle</strong></p></li>
+				<li><strong>Polaris®</strong>
+				    <p>Debe terner &reg; al final </p></li>
+				<li><strong>Slingshot®</strong>
+				    <p>Debe terner &reg; al final </p></li>
+			</ul>
+		</div>
+		<hr>
+		<div id="learn-to-ride">
+			<h3>On Harley sites, if there is a "learn to ride" page, use the new template that H-D sent to us (make sure the Harley ID is correct).</h3>
+			<h4>1. Revisar de que tipo es</h4>
+			<p>Si en el sitio se necesita una pagina "Learn to ride" lo primero que tenemos que revisar el tipo, hay dos: "New Rides" y "New and Skilled Riders"</p>
+			<p>Si es <span class="image-link"><a href="/fckimages/loading/learn-to-ride1.png" target="_blank">"New and Skilled Rides"</a></span> mostrara informacion de ambos, de lo contrario seria de solo "New Riders"</p>
+			<h4>2. Crear la pagina</h4>
+			<p>Se crea una pagina llamada "learn-to-ride"</p>
+			<h4>3. Imagenes</h4>
+			<p>Se copia la carpeta "learn-to-ride", en la carpeta del sitio en la locacion "/images/pages" <span class="image-link"><a href="/fckimages/loading/learn-to-ride2.png" target="_blank">Ej.</a></span></p>
+			<h4>4. riders-edge.less</h4>
+			<p>Se copia el archivo "riders-edge.less", en la carpeta del sitio en la locacion "/less/content" (si la carpeta "content" no existe se crea) <span class="image-link"><a href="/fckimages/loading/learn-to-ride3.png" target="_blank">Ej.</a></span></p>
+			<h4>5. html</h4>
+			<p>Se copia todo el contenido del archivo "learn-to-ride.html" en la pagina que se creo anteriormeente</p>
+			<h4>6. Scripts</h4>
+			<p>se crearan 2 snippets html para los scripts, seran "RiderScript y ButtonScript"</p> 
+
+			<p><strong>RiderScript:</strong> </p>
+			<p>para crearlo seleccionamos la opcion html de snippets, para la pagina "learn-to-ride" y se llamara "RiderScript" <span class="image-link"><a href="/fckimages/loading/learn-to-ride4.png" target="_blank">Ej.</a></span>, para finalizar se presionara new</p>
+			<p>en el se copiara todo el contenido del archivo "RiderScript.html" camiando el <span class="image-link"><a href="/fckimages/loading/learn-to-ride5.png" target="_blank">dealerID</a></span> por el del sitio</p>
+			
+			<p><strong>ButtonScript:</strong></p>
+			<p>se crea de la misma forma que "RiderScript" pero ahora se copia el contenido de ButtonScript.html.</p>
+
+			<p><strong>dealerID :</strong></p>
+			<p>para conocer el dealerID del sitio que estamos trabajando solo tenemos que presionar el boton "find a class" en la pagina learn-to-ride del sitio live. esto nos abrira una nueva ventana y de hay lo obtendremos <span class="image-link"><a href="/fckimages/loading/learn-to-ride6.png" target="_blank">Ej.</a></span></p>
+			<p>El numero que obtuvimos lo dividimos entre 29 y ese sea el dealerID que pondremos en el script</p>
+
+			<h4>6. less</h4>
+			<p>para finalizar en el less importamos el archivo <span class="image-link"><a href="/fckimages/loading/learn-to-ride7.png" target="_blank">"riders-edge.less"</a></span>, y agregamos <span class="image-link"><a href="/fckimages/loading/learn-to-ride8.png" target="_blank">estilos</a></span> a la pagina</p>
+
+			<p>ahora solo compilamos y listo</p>
+		</div>
+		<hr>
+		<div id="compatibility">
+			<h3>Check your site for compatibility with Chrome, Firefox, Edge and IE11 in your PC</h3>
+			<p>Debemos revisar el sitio en distintos exploradores para verificar y asegurarnos que si es compatible con: Chrome, Firefox, Edge e IE11 en tu PC, abriendo el sitio en dichos exploradores, y revisar en vistas XS-SM-MD Y LG que el sitio no se rompa.</p>
+		</div>
+		<hr>
+		<div id="qa-check">
+			<h3>QA quick Check (header.asp line 1 and look for any color boxes that might indicate errors)</h3>
+			<p>en el archivo <span class="image-link"><a href="/fckimages/loading/header1.png" target="_blank">"header.asp"</a></span> agregamos el script : "&lt;script src="http://junipertrimsdbshowroom.clients.dealerspike.net/js/qaCheck.js" type="text/javascript"&gt;&lt;/script&gt;" en la primera linea.</p>
+			<p>este script nos muestra unos <span class="image-link"><a href="/fckimages/loading/qa-check1.png" target="_blank">recuadros</a></span> en donde encuentra errores, como pueder ser links que no funcionan, marcas mal escritas, etc. podemos ver el significado de los recuadros <a href="https://docs.google.com/spreadsheets/d/1JzjFt3d9w-ESHW3aYUQm99XQEgq_D0SLX1CKUDIHdQE/edit#gid=0" target="_blank">aqui</a>.</p>
+			<p>Con el script puesto damos una revision al sitio para buscar errores que pudimos haber omitido.</p>
+		</div>
+		<hr>
+		<div id="Backup1">
+			<h4>Backup your custom.less and config.asp on serverlicious, if you like, you can also back up the content of your snippets</h4>
+			<p>Debemos realisar un respaldo de los archivos "custom.less y config.asp" en el serverlicious</p>
+			<p>para abrir serverlicious abrimos el comando ejecutar (tecla windows + R)  y escribimos "\\serverlicious" <span class="image-link"><a href="/fckimages/loading/Backup1-1.png" target="_blank">Ej.</a></span> y precionamos aceptar</p>
+			<p>Vamos a la direccion "\\serverlicious\Content Loading\BackUp Content\responsive" y creamos una carpeta con el nombre del sitio <span class="image-link"><a href="/fckimages/loading/Backup1-2.png" target="_blank">Ej.</a></span>. <strong>Si el sitio es de RE, la carpeta ya deberia de existir (aunque en ocaciones no es asi)</strong></p>
+			<p>Con las carpetas creadas solo necesitamos los archivos, los podemos conseguir del Filezilla, entramos a la carpeta less del sitio y copiamos <span class="image-link"><a href="/fckimages/loading/Backup1-3.png" target="_blank">"Custom.less"</a></span> a nuestra carpet en serverlicious</p>
+			<p> el archivo "config.asp" se encuentra en la carpeta <span class="image-link"><a href="/fckimages/loading/Backup1-4.png" target="_blank">"includes"</a></span> de nuestro sitio
+		</div>
+		<hr>
+		<div id="Backup2">
+			<h3>RE: create a backup in Serverlicious @ "BackUp (Live Sites)" for content, customcode, css & config.asp.</h3>
+		</div>
+		<hr>
+	</div>
+	<div class="jump-to-top"><a href="#main">Back to top</a></div>
+</section>
